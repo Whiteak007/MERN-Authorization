@@ -65,8 +65,8 @@ const ProductFormModal = ({ isOpen, onClose, productToEdit, onSave }) => {
       const token = localStorage.getItem("token");
       const method = productToEdit ? "PUT" : "POST";
       const url = productToEdit
-        ? `http://localhost:3000/api/products/${productToEdit._id}`
-        : "http://localhost:3000/api/products";
+        ? `https://mern-authorization-crud-api.vercel.app/api/products/${productToEdit._id}`
+        : "https://mern-authorization-crud-api.vercel.app/api/products";
 
       const form = new FormData();
       form.append("title", formData.title);

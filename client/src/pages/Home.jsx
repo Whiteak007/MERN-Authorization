@@ -23,7 +23,7 @@ function Home() {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/products", {
+      const response = await fetch("https://mern-authorization-crud-api.vercel.app/api/products", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ function Home() {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch(`http://localhost:3000/api/products/${productId}`, {
+        const response = await fetch(`https://mern-authorization-crud-api.vercel.app/api/products/${productId}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,

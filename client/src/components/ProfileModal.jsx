@@ -56,7 +56,7 @@ const ProfileModal = ({ isOpen, onClose, user }) => {
 
     try {
       // Here you would call your API to update the profile
-      const response = await fetch('http://localhost:3000/api/auth/edit', {
+      const response = await fetch('https://mern-authorization-crud-api.vercel.app/api/auth/edit', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -18,7 +18,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:3000/api/auth/login";
+      const url = "https://mern-authorization-crud-api.vercel.app/api/auth/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {
